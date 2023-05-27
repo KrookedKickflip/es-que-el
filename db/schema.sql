@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS trackemployees;
+CREATE DATABASE trackemployees;
+
 CREATE TABLE department (
   id INT PRIMARY KEY,
   name VARCHAR(30)
