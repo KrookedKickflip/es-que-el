@@ -1,0 +1,15 @@
+{  
+  "name": "keep-up-with-employee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "seed": "npm run seed"
+    },
+    "dependencies": {
+      "console.table": "^0.10.0",
+      "inquirer": "^8.2.4",
+      "mysql2": "^3.2.0"
+    }
+  }
