@@ -4,7 +4,7 @@ require('console.table');
 
 async function start() {
   try {
-    console.log('start function called');
+    //console.log('start function called');
     // Prompt the user to select a choice from the list
     const response = await inquirer.prompt([
       {
@@ -24,20 +24,20 @@ async function start() {
       }
     ]);
 
-    console.log('User choice:', response.choice);
+    //console.log('User choice:', response.choice);
 
     if (response.choice === 'view all departments') {
-      console.log('Calling viewD');
+      //console.log('Calling viewD');
       // Calls the viewD function to display all departments if the choose 'veiw all dept'
       await viewD(); 
 
     } else if (response.choice === 'view all roles') {
-      console.log('Calling viewR');
+      //console.log('Calling viewR');
       // Calls the viewR function to display all roles if they choose 'veiw all roles'
       await viewR(); 
 
     } else if (response.choice === 'view all employees') {
-      console.log('Calling viewE');
+      //console.log('Calling viewE');
       // Calls the viewE function to display all employees if they choose 'veiw all employees'
       await viewE(); 
 
@@ -59,7 +59,7 @@ async function start() {
 }
 
 async function viewD() {
-  console.log('viewD function called');
+  //console.log('viewD function called');
   const [results] = await db.promise().query('SELECT * FROM department;');
   // Displays the results of the query as a table in the console
   console.table(results); 
@@ -68,14 +68,14 @@ async function viewD() {
 }
 
 async function viewR() {
-  console.log('viewR function called');
+  //console.log('viewR function called');
   const [results] = await db.promise().query('SELECT * FROM role;');
   console.table(results); 
   start();
 }
 
 async function viewE() {
-  console.log('viewE function called');
+  //console.log('viewE function called');
   const [results] = await db.promise().query('SELECT * FROM employee;');
   console.table(results); 
   start(); 
