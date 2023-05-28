@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS trackemployees;
-CREATE DATABASE trackemployees;
+DROP DATABASE IF EXISTS trackemployees_db;
+CREATE DATABASE trackemployees_db;
+USE trackemployees_db;
 
 CREATE TABLE department (
   id INT PRIMARY KEY,
